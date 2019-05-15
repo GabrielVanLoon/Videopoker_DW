@@ -147,7 +147,7 @@ public class Jogador {
 		strLinha3[11] = "|  Valete  |";
 		strLinha3[12] = "|  Dama    |";
 		strLinha3[13] = "|  Rei de  |";
-		strLinha3[14] = "|  Ã�s  de  |";
+		strLinha3[14] = "|  Às  de  |";
 		
 		String[] strLinha4 = new String[4];
 		strLinha4[0]  = "|  Copas   |";
@@ -168,7 +168,7 @@ public class Jogador {
 		strLinha6[11] = "|        11|";
 		strLinha6[12] = "|        12|";
 		strLinha6[13] = "|        13|";
-		strLinha6[14]  = "|         A|";
+		strLinha6[14] = "|         A|";
 		
 		String[] strPrint = new String[8];
 		

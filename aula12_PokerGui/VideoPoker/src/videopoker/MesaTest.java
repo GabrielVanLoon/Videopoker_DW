@@ -87,15 +87,4 @@ public class MesaTest {
 		assertEquals(100, result);
 	}
 	
-	/**
-	@Test
-	public void testCheckSequenciaNum() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testStrCombinacao() {
-		fail("Not yet implemented");
-	}
-	*/
 }
