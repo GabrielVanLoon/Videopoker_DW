@@ -1,9 +1,12 @@
-package videopoker;
+package testes;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import videopoker.Carta;
+import videopoker.Mesa;
 
 public class MesaTest {
 	
@@ -16,8 +19,8 @@ public class MesaTest {
 
 	@Test
 	public void testAposta() {
-		// Caso 1: Cartas sem nenhum padrão, pois de tabela irá testar o caso negativo
-		// dos outros 3 métodos abaixo.
+		// Caso 1: Cartas sem nenhum padrï¿½o, pois de tabela irï¿½ testar o caso negativo
+		// dos outros 3 mï¿½todos abaixo.
 		Carta[] c = new Carta[5];
 		c[0] = new Carta(5,  1);
 		c[1] = new Carta(7,  1);
