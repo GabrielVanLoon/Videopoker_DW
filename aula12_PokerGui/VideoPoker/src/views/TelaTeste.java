@@ -15,7 +15,7 @@ public class TelaTeste extends JFrame{
 		JPanel jp = (JPanel) this.getContentPane();
 		jp.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		JLabel background = new JLabel(new ImageIcon("C:\\Users\\Albert Wolf\\Desktop\\Wallpaper\\Corrin.jpg"));
-		//background.setLocation(0, 0);
+		background.setLocation(0, 0);
 		background.setSize(500, 200);
 		add (background);
 		JLabel text1 = new JLabel ("Olá, tudo bem?");
