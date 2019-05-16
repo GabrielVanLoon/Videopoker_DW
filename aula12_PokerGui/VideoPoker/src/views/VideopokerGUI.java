@@ -21,10 +21,9 @@ public class VideopokerGUI extends JFrame {
 		/**
 		 * Configurando o JFrame
 		 */
-		setLayout(null);
+		// setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setSize(1000, 667); 
-		setBounds(0, 0, 1000, 667); // Fixa o tamanho da tela
+		setBounds(0, 0, 1000, 667);  // Fixa o tamanho da tela
 		setResizable(false);
 		setLocationRelativeTo(null); // Inicia a tela no centro 
 
@@ -52,7 +51,6 @@ public class VideopokerGUI extends JFrame {
 	
 	public static void main(String[] args) {
 		VideopokerGUI frame = new VideopokerGUI("Video Poker");
-		
 	}
 	
 }
