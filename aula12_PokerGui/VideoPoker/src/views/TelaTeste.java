@@ -14,11 +14,12 @@ public class TelaTeste extends JFrame{
 		//this.setLayout(new GridLayout(3,1));
 		JPanel jp = (JPanel) this.getContentPane();
 		jp.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
+		
 		JLabel background = new JLabel(new ImageIcon("C:\\Users\\Albert Wolf\\Desktop\\Wallpaper\\Corrin.jpg"));
 		background.setLocation(0, 0);
 		background.setSize(500, 200);
 		add (background);
-		JLabel text1 = new JLabel ("Olá, tudo bem?");
+		JLabel text1 = new JLabel ("Olï¿½, tudo bem?");
 		text1.setIconTextGap(-500);
 		//text1.setLocation(0, 0);
 		add (text1);
