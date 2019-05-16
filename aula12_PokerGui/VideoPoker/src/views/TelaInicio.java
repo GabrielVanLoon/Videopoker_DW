@@ -12,7 +12,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class TelaInicio extends JPanel {
-
+	
+	public  JButton btnJogar;
+	private JLayeredPane layers;
+	private JLabel  background;
+	
 	public TelaInicio() {
 		/**
 		 * Configurações Gerais
@@ -27,14 +31,14 @@ public class TelaInicio extends JPanel {
 		/**
 		 * Gerando o JLayers
 		 */
-		JLayeredPane layers = new JLayeredPane();
+		layers = new JLayeredPane();
 		add(layers, BorderLayout.CENTER);
 		layers.setLayout(null);
 		
 		/**
 		 * Imagem de Background
 		 */
-		JLabel background = new JLabel(new ImageIcon(".\\aula12_PokerGui\\VideoPoker\\resources\\VideoPokerBackground.jpg"));
+		background = new JLabel(new ImageIcon(".\\aula12_PokerGui\\VideoPoker\\resources\\VideoPokerBackground.jpg"));
 		background.setBounds(0, 0, 1000, 667);
 		layers.setLayer(background, 1);
 		add(background);
@@ -42,12 +46,11 @@ public class TelaInicio extends JPanel {
 		/**
 		 * Adicionado Botão Jogar
 		 */
-		JButton btnJogar = new JButton("NOVO JOGO");
+		btnJogar = new JButton("NOVO JOGO");
 		btnJogar.setBounds(550, 300, 200, 40);
 		layers.setLayer(btnJogar, 2);
 		add(btnJogar);
-		
 	}
-
+	
 
 }
