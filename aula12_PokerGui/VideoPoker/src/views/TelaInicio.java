@@ -2,9 +2,12 @@ package views;
 
 import java.awt.BorderLayout;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JOptionPane;
@@ -35,10 +38,11 @@ public class TelaInicio extends JPanel {
 		add(layers, BorderLayout.CENTER);
 		layers.setLayout(null);
 		
+		
 		/**
 		 * Imagem de Background
 		 */
-		background = new JLabel(new ImageIcon(".\\aula12_PokerGui\\VideoPoker\\resources\\VideoPokerBackground.jpg"));
+		background = new JLabel(new ImageIcon("./aula12_PokerGui/VideoPoker/resources/VideoPokerBackground.jpg"));
 		background.setBounds(0, 0, 1000, 667);
 		layers.setLayer(background, 1);
 		add(background);
@@ -50,6 +54,10 @@ public class TelaInicio extends JPanel {
 		btnJogar.setBounds(550, 300, 200, 40);
 		layers.setLayer(btnJogar, 2);
 		add(btnJogar);
+		
+		// Mostrando o caminho relativo atual.
+		Path currentRelativePath = Paths.get("");
+		JOptionPane.showMessageDialog(this, currentRelativePath.toAbsolutePath().toString());
 	}
 	
 
