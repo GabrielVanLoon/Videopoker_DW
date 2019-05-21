@@ -95,7 +95,7 @@ public class Jogador {
 	 */
 	public void trocarCarta(Baralho b, String s) {
 		 boolean[] pos = new boolean[maxCartas];
-		 String[] inteiros = s.split(" ");
+		 String[] inteiros =  s.split(" ");
 		 Arrays.fill(pos, false);
 		 
 		 for (int i = 0; i < inteiros.length; i++) {

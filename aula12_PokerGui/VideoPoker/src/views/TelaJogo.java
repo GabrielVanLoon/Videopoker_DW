@@ -14,6 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 
@@ -39,24 +40,27 @@ public class TelaJogo extends JPanel {
 		aposta.setLayout(new FlowLayout());
 		aposta.setBackground(null);
 		
+		Font  fontApostas      = new Font("Impact", Font.BOLD, 36);
+		Color fontColorApostas = new Color(0xe4,0xe4,0xe4); 
+		
 		JLabel lblAposta = new JLabel("Valor da Aposta: ");
-		lblAposta.setFont(new Font("Impact", Font.BOLD, 48));
-		lblAposta.setForeground(new Color(0xe4,0xe4,0xe4));
+		lblAposta.setFont(fontApostas);
+		lblAposta.setForeground(fontColorApostas);
 		aposta.add(lblAposta);
 		
-		JLabel lblValorAposta = new JLabel("XXX");
-		lblValorAposta.setFont(new Font("Impact", Font.BOLD, 48));
-		lblValorAposta.setForeground(new Color(0xe4,0xe4,0xe4));
+		JLabel lblValorAposta = new JLabel("???");
+		lblValorAposta.setFont(fontApostas);
+		lblValorAposta.setForeground(fontColorApostas);
 		aposta.add(lblValorAposta);
 		
 		JLabel lblCreditos = new JLabel(" | Créditos Atuais: ");
-		lblCreditos.setFont(new Font("Impact", Font.BOLD, 48));
-		lblCreditos.setForeground(new Color(0xe4,0xe4,0xe4));
+		lblCreditos.setFont(fontApostas);
+		lblCreditos.setForeground(fontColorApostas);
 		aposta.add(lblCreditos);
 		
-		JLabel lblValorCreditos = new JLabel("YYY");
-		lblValorCreditos.setFont(new Font("Impact", Font.BOLD, 48));
-		lblValorCreditos.setForeground(new Color(0xe4,0xe4,0xe4));
+		JLabel lblValorCreditos = new JLabel("200");
+		lblValorCreditos.setFont(fontApostas);
+		lblValorCreditos.setForeground(fontColorApostas);
 		aposta.add(lblValorCreditos);
 		add(aposta);
 		
@@ -65,7 +69,7 @@ public class TelaJogo extends JPanel {
 		 */
 		JPanel jpCartas = new JPanel();
 		jpCartas.setBackground(null);
-		jpCartas.setBorder(new EmptyBorder(60,0,60,0));
+		jpCartas.setBorder(new EmptyBorder(40,0,40,0));
 		jpCartas.setLayout(new GridLayout(1, 5));
 		
 		JLabel[] carta = new JLabel[5];
@@ -80,9 +84,34 @@ public class TelaJogo extends JPanel {
 		}
 		add(jpCartas);
 		
+		/**
+		 * Painel para leitura da aposta
+		 */
+		JPanel jpFazerAposta = new JPanel();
+		jpFazerAposta.setLayout(new FlowLayout());
+		jpFazerAposta.setBackground(null);
+		jpFazerAposta.setSize(this.getWidth(), 0);
+		
+		JLabel		lblTxtAposta	= new JLabel("Insira o valor da aposta: ");
+		lblTxtAposta.setFont(fontApostas);
+		lblTxtAposta.setForeground(fontColorApostas);
+		
+		JTextField 	txtAposta 		= new JTextField("(valor)");
+		txtAposta.setPreferredSize(new Dimension(140, 40));
+		txtAposta.setBorder(new EmptyBorder(2, 10, 2, 10));
+		txtAposta.setFont(new Font("Impact", Font.BOLD, 18));
+		
+		JButton		btnApostar = new JButton("APOSTAR CRÉDITOS");
+		btnApostar.setPreferredSize(new Dimension(200,40));
+		
+		jpFazerAposta.add(lblTxtAposta);
+		jpFazerAposta.add(txtAposta);
+		jpFazerAposta.add(btnApostar);
+		jpFazerAposta.setVisible(false);
+		add(jpFazerAposta);
 		
 		/**
-		 * Configurações dos Botões
+		 * Painel de Botoes 
 		 */
 		JPanel jpBotoes = new JPanel();
 		jpBotoes.setLayout(new FlowLayout());
@@ -96,7 +125,43 @@ public class TelaJogo extends JPanel {
 		btnManter.setPreferredSize(new Dimension(200,40));
 		jpBotoes.add(btnManter);
 		
+		jpBotoes.setVisible(false);
 		add(jpBotoes);
+		
+		/**
+		 * Painel de fim de rodada
+		 */
+		JPanel jpFimRodada = new JPanel();
+		jpFimRodada.setLayout(new GridLayout(2,1));
+		jpFimRodada.setBackground(null);
+		
+		JPanel jpResultado = new JPanel();
+		jpResultado.setLayout(new FlowLayout());
+		jpResultado.setBackground(null);
+		
+		JPanel jpOpcoes = new JPanel();
+		jpOpcoes.setLayout(new FlowLayout());
+		jpOpcoes.setBackground(null);
+		
+		
+		JLabel lblResultado = new JLabel("Acabaram os seus créditos!!!");
+		lblResultado.setFont(fontApostas);
+		lblResultado.setForeground(fontColorApostas);
+		jpResultado.add(lblResultado);
+		
+		JButton btnNovaRodada = new JButton("NOVA RODADA");
+		btnNovaRodada.setPreferredSize(new Dimension(200,40));
+		jpOpcoes.add(btnNovaRodada);
+		
+		JButton btnSair = new JButton("SAIR DO JOGO");
+		btnSair.setPreferredSize(new Dimension(200,40));
+		jpOpcoes.add(btnSair);
+		
+		
+		
+		jpFimRodada.add(jpResultado);
+		jpFimRodada.add(jpOpcoes);
+		add(jpFimRodada);
 		
 	}
 }
