@@ -52,12 +52,18 @@ public class TelaInicio extends JPanel {
 		 */
 		btnJogar = new JButton("NOVO JOGO");
 		btnJogar.setBounds(550, 300, 200, 40);
+		
 		layers.setLayer(btnJogar, 2);
 		add(btnJogar);
 		
+		
+		// garantindo que o background não será desenhado em cima do botão
+		setComponentZOrder(background, 1);
+		setComponentZOrder(btnJogar,   0);
+		
 		// Mostrando o caminho relativo atual.
-		Path currentRelativePath = Paths.get("");
-		JOptionPane.showMessageDialog(this, currentRelativePath.toAbsolutePath().toString());
+		// Path currentRelativePath = Paths.get("");
+		// JOptionPane.showMessageDialog(this, currentRelativePath.toAbsolutePath().toString());
 	}
 	
 
