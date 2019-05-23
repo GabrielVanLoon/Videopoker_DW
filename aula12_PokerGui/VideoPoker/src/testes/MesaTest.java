@@ -1,6 +1,7 @@
 package testes;
 
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -19,8 +20,8 @@ public class MesaTest {
 
 	@Test
 	public void testAposta() {
-		// Caso 1: Cartas sem nenhum padr�o, pois de tabela ir� testar o caso negativo
-		// dos outros 3 m�todos abaixo.
+		// Caso 1: Cartas sem nenhum padrao, pois de tabela ira testar o caso negativo
+		// dos outros 3 metodos abaixo.
 		Carta[] c = new Carta[5];
 		c[0] = new Carta(5,  1);
 		c[1] = new Carta(7,  1);
@@ -46,7 +47,7 @@ public class MesaTest {
 		int[] n    = new int[c.length];
 		for (int i = 0; i < n.length; i++) {
 			n[i] = c[i].getNumero();
-		}
+		} 
 		
 		int result = m.checkStraightFlush(c, n);
 		assertEquals(5, result);

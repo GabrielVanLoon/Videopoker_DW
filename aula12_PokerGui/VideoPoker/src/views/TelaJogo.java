@@ -18,6 +18,11 @@ import javax.swing.JTextField;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 
+/**
+ * JPanel que possui configurado todos os elementos necessários na tela de jogo.
+ * 
+ * @author gabriel
+ */
 public class TelaJogo extends JPanel {
 	
 	public JLabel 			lblValorAposta;
@@ -43,6 +48,9 @@ public class TelaJogo extends JPanel {
 		configurarPainel();
 	}
 	
+	/**
+	 * Configura todos os elementos do painel.
+	 */
 	public void configurarPainel() {
 		/**
 		 * Configurações do JPanels 

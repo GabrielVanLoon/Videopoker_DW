@@ -8,17 +8,32 @@ import javax.swing.JLabel;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 
+/**
+ * Classe que implementa uma versão extendida de um JPanel mas que possui os atributos
+ * de uma Carta de baralho. Além disso possui uma propriedade para verificar se a mesma
+ * está ativada ou nao.
+ * 
+ * @author gabriel
+ */
 public class ImagemCarta extends JLabel {
 	
 	private int 	numero = 0;
 	private int 	naipe  = 0;
 	private boolean selecionado = false;
 	
+	/**
+	 * Construtor que recebe um Icone.
+	 * @param icon
+	 */
 	public ImagemCarta(ImageIcon icon) {
 		super(icon);
 		this.setBorder(new EmptyBorder(3,3,3,3));
 	}
 	
+	/**
+	 * Alterna o elemento como selecionado e não selecionado. Além disso também ajusta
+	 * sua configuração visual conforme seu status.
+	 */
 	public void swapSelecionado() {
 		if(numero == 0)
 			return;

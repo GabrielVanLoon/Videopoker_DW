@@ -20,7 +20,12 @@ import videopoker.Carta;
 import videopoker.Jogador;
 import videopoker.Mesa;
 
-
+/**
+ * JFrame que irá fazer as chamadas de telas, alem de controlar todo o fluxo
+ * de código do jogo (Funciona como uma especie de Controller).
+ * 
+ * @author gabriel
+ */
 public class VideopokerGUI extends JFrame {
 	
 	TelaInicio telaInicio = new TelaInicio(); // extends Jpanel
@@ -32,6 +37,10 @@ public class VideopokerGUI extends JFrame {
 	public int		valorAposta = -1;
 	public int 		trocasDisponiveis = 3;
 	
+	/**
+	 * Contrutor do Jframe.
+	 * @param nome
+	 */
 	public VideopokerGUI(String nome) {
 		super(nome);
 		configurarFrame();
@@ -40,6 +49,9 @@ public class VideopokerGUI extends JFrame {
 		setVisible(true);
 	}
 	
+	/**
+	 * Configura os atributos basicos da tela.
+	 */
 	public void configurarFrame() {
 		/**
 		 * Configurando o JFrame
@@ -50,6 +62,9 @@ public class VideopokerGUI extends JFrame {
 		setLocationRelativeTo(null); // Inicia a tela no centro 
 	}
 	
+	/**
+	 * Configura todo os codigos referentes a tela inicio.
+	 */
 	public void configurarTelaInicial() {
 		telaInicio.btnJogar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,12 +73,21 @@ public class VideopokerGUI extends JFrame {
         });
 	}
 	
+	/**
+	 * Inicia a tela inicio e insere ela no JFrame
+	 */
 	public void abrirTelaInicial() {
 		setContentPane(telaInicio);
 		revalidate();
 		telaInicio.btnJogar.repaint();
 	}
 	
+	
+	/**
+	 * Atualiza as 5 cartas que aparecer na Tela de Jogo.
+	 * @param jp objeto TelaJogo instanciado para o JFrame.
+	 * @param resetarMesa Caso positivo reseta as 5 cartas na mesa.
+	 */
 	public void atualizarMesa(TelaJogo jp, boolean resetarMesa) {
 		if(resetarMesa) {
 			ImageIcon   icon = new ImageIcon("./aula12_PokerGui/VideoPoker/resources/deck/0_back.jpg");
@@ -108,7 +132,10 @@ public class VideopokerGUI extends JFrame {
 		}
 	}
 	
-	
+	/**
+	 * Cria a instancia de uma nova TelaJogo e faz as configurações necessarias
+	 * para que as rodadas ocorram.
+	 */
 	public void abrirTelaJogo() {
 		TelaJogo telaJogo = new TelaJogo();
 		setContentPane(telaJogo);

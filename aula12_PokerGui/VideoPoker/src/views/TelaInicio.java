@@ -14,6 +14,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+/**
+ * JPanel que contém as configurações gráficas da Tela Inicial.
+ * @author gabriel
+ *
+ */
 public class TelaInicio extends JPanel {
 	
 	public  JButton btnJogar;
@@ -29,7 +34,10 @@ public class TelaInicio extends JPanel {
 		setLayout(null);
 		configurarPainel();
 	}
-
+	
+	/**
+	 * Método que configura os elementos da tela inicial do jogo.
+	 */
 	public void configurarPainel() {
 		/**
 		 * Gerando o JLayers
