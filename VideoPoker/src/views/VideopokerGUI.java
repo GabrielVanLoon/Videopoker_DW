@@ -90,7 +90,7 @@ public class VideopokerGUI extends JFrame {
 	 */
 	public void atualizarMesa(TelaJogo jp, boolean resetarMesa) {
 		if(resetarMesa) {
-			ImageIcon   icon = new ImageIcon("./aula12_PokerGui/VideoPoker/resources/deck/0_back.jpg");
+			ImageIcon   icon = new ImageIcon("./resources/deck/0_back.jpg");
 			EmptyBorder border = new EmptyBorder(3,3,3,3);
 			for(int i = 0; i < 5; i++) {
 				jp.carta[i].setIcon(icon);
@@ -125,7 +125,7 @@ public class VideopokerGUI extends JFrame {
 						break;
 				}
 				
-				jp.carta[i].setIcon(new ImageIcon("./aula12_PokerGui/VideoPoker/resources/deck/" + nomeCarta));
+				jp.carta[i].setIcon(new ImageIcon("./resources/deck/" + nomeCarta));
 				jp.carta[i].setNumero(numero);
 				jp.carta[i].setNaipe(cartas[i].getNaipe());
 			}

@@ -100,7 +100,7 @@ public class TelaJogo extends JPanel {
 		
 		this.carta = new ImagemCarta[5];
 		for(int i = 0; i < 5; i++) {
-			carta[i] = new ImagemCarta(new ImageIcon("./aula12_PokerGui/VideoPoker/resources/deck/0_back.jpg"));
+			carta[i] = new ImagemCarta(new ImageIcon("./resources/deck/0_back.jpg"));
 			carta[i].setBorder(new EmptyBorder(3,3,3,3));
 //			carta[i].setBorder(new CompoundBorder(
 //				    BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(0x00, 0x38, 0x33)), 

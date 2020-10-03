@@ -50,7 +50,7 @@ public class TelaInicio extends JPanel {
 		/**
 		 * Imagem de Background
 		 */
-		background = new JLabel(new ImageIcon("./aula12_PokerGui/VideoPoker/resources/VideoPokerBackground.jpg"));
+		background = new JLabel(new ImageIcon("./resources/VideoPokerBackground.jpg"));
 		background.setBounds(0, 0, 1000, 667);
 		layers.setLayer(background, 1);
 		add(background);
